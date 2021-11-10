@@ -92,6 +92,7 @@ public class XMLConfigBuilder extends BaseBuilder {
   }
 
   public Configuration parse() {
+    // 防止XMLConfigBuilder被多次加载
     if (parsed) {
       throw new BuilderException("Each XMLConfigBuilder can only be used once.");
     }
@@ -100,6 +101,7 @@ public class XMLConfigBuilder extends BaseBuilder {
     return configuration;
   }
 
+  // 加载xml文件，转换
   private void parseConfiguration(XNode root) {
     try {
       // issue #117 read properties first

@@ -32,6 +32,7 @@ import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
  */
 public class SqlSessionFactoryBuilder {
 
+  // Mysql加载文件入口
   public SqlSessionFactory build(Reader reader) {
     return build(reader, null, null);
   }

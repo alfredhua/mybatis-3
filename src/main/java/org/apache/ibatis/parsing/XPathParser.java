@@ -207,6 +207,7 @@ public class XPathParser {
     return xnodes;
   }
 
+  // 找到相应的xml文件的节点，然后进行解析
   public XNode evalNode(String expression) {
     return evalNode(document, expression);
   }
